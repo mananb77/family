@@ -1,0 +1,689 @@
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, var(--sky-blue) 0%, var(--cream) 100%);
+  padding: 6rem 1.5rem;
+}
+
+.hero-inner {
+  max-width: 700px;
+}
+
+.hero-diya {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-title-hindi {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--navy-light);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hero-subtitle-hindi {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero-message {
+  font-size: 1.1rem;
+  color: var(--navy-light);
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0.5rem auto 0;
+}
+
+/* ============================================
+   MEMORIAL CARDS
+   ============================================ */
+.memorials {
+  background: var(--cream);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.memorial-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(44, 62, 90, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.memorial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(44, 62, 90, 0.15);
+  color: inherit;
+}
+
+.card-photo-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.card-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.memorial-card:hover .card-photo {
+  transform: scale(1.05);
+}
+
+/* Zoom into Dadi's face — full-body photo needs cropping */
+.memorial-card:nth-child(4) .card-photo {
+  object-position: center 10%;
+  transform: scale(1.8);
+  transform-origin: center 18%;
+}
+
+.memorial-card:nth-child(4):hover .card-photo {
+  transform: scale(1.9);
+}
+
+.card-photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(44, 62, 90, 0.3), transparent);
+  pointer-events: none;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-relation {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-name {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+
+.card-name-hindi {
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.card-years {
+  font-size: 0.85rem;
+  color: var(--navy-light);
+  margin-bottom: 0.8rem;
+  font-weight: 300;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: var(--navy-light);
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.card-link {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--sky-blue-deep);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card-link .arrow {
+  transition: transform 0.3s ease;
+}
+
+.memorial-card:hover .card-link .arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   FAMILY TREE
+   ============================================ */
+.family-tree {
+  background: linear-gradient(180deg, var(--cream) 0%, white 50%, var(--cream) 100%);
+  padding-bottom: 4rem;
+}
+
+.tree {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree-row {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.tree-grandparents {
+  gap: 6rem;
+}
+
+.tree-couple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.couple-label {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--navy-light);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.couple-photos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.couple-connector {
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold-light), var(--gold));
+  border-radius: 1px;
+}
+
+.couple-connector--heart {
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 1.2rem;
+}
+
+/* Person circles */
+.person-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.person-photo-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(196, 163, 90, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+.person-circle--large .person-photo-wrapper {
+  width: 120px;
+  height: 120px;
+}
+
+.person-circle--medium .person-photo-wrapper {
+  width: 100px;
+  height: 100px;
+}
+
+.person-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Zoom into Dadi's face in circle — full-body photo needs cropping */
+.person-photo[src*="IMG-20210801"] {
+  object-position: center 10%;
+  transform: scale(1.8);
+  transform-origin: center 18%;
+}
+
+.person-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-blue-deep) 100%);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.person-circle--medium .person-initials {
+  font-size: 1.5rem;
+}
+
+.person-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--navy);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.person-name-hi {
+  font-size: 0.8rem;
+  color: var(--gold);
+}
+
+.person-relation {
+  font-size: 0.75rem;
+  color: var(--navy-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.15rem;
+}
+
+/* Connector lines between rows */
+.tree-connector-vertical {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+  padding: 0.5rem 0;
+}
+
+.tree-connector-single {
+  gap: 0;
+}
+
+.connector-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), var(--gold-light));
+}
+
+.tree-children {
+  gap: 3rem;
+}
+
+/* ============================================
+   EXTENDED FAMILY TREE
+   ============================================ */
+.extended-tree {
+  background: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.extended-tree .section-inner {
+  max-width: 1400px;
+}
+
+.ext-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Two-sided row */
+.ext-sides-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.ext-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.ext-side-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold-light);
+  width: 100%;
+}
+
+.ext-divider-vertical {
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--gold), var(--gold-light), transparent);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.ext-grandparents {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Generation rows — horizontal layout */
+.ext-generation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ext-generation--families {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ext-family-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  border-radius: 16px;
+  background: var(--cream);
+}
+
+.ext-couple {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ext-children-connector {
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem 0;
+}
+
+.connector-line--short {
+  height: 20px;
+}
+
+.ext-children-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Small person circles for extended tree */
+.person-circle--small .person-photo-wrapper {
+  width: 65px;
+  height: 65px;
+  border-width: 2px;
+}
+
+.person-circle--small .person-initials {
+  font-size: 1.2rem;
+}
+
+.person-circle--small .person-name {
+  font-size: 0.8rem;
+}
+
+.person-circle--small .person-name-hi {
+  font-size: 0.65rem;
+}
+
+.person-circle--small .person-relation {
+  font-size: 0.65rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-diya {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.footer-title-hindi {
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.footer .divider::before,
+.footer .divider::after {
+  background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+}
+
+.share-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.8rem;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  color: var(--gold);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.share-button:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 4rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-title-hindi {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-photo-container {
+    padding-top: 75%;
+  }
+
+  .tree-row {
+    gap: 1.5rem;
+  }
+
+  .tree-grandparents {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .person-circle--large .person-photo-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .person-circle--medium .person-photo-wrapper {
+    width: 75px;
+    height: 75px;
+  }
+
+  .couple-photos {
+    gap: 0.5rem;
+  }
+
+  .tree-connector-vertical {
+    gap: 0;
+  }
+
+  .tree-connector-vertical .connector-line:first-child:not(:last-child) {
+    display: none;
+  }
+
+  .person-name {
+    font-size: 0.85rem;
+  }
+
+  .person-name-hi {
+    font-size: 0.7rem;
+  }
+
+  .couple-label {
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Extended tree mobile */
+  .ext-sides-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .ext-side {
+    max-width: 100%;
+  }
+
+  .ext-divider-vertical {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), var(--gold-light), transparent);
+    align-self: center;
+    margin: 1.5rem 0;
+  }
+
+  .ext-grandparents {
+    gap: 0.5rem;
+  }
+
+  .ext-generation--families {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person-circle--small .person-photo-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-message {
+    font-size: 0.95rem;
+  }
+
+  .person-circle--large .person-photo-wrapper {
+    width: 75px;
+    height: 75px;
+  }
+
+  .person-circle--medium .person-photo-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+
+  .person-circle--small .person-photo-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .person-circle--small .person-name {
+    font-size: 0.7rem;
+  }
+
+  .person-circle--small .person-name-hi {
+    font-size: 0.6rem;
+  }
+
+  .ext-couple {
+    gap: 0.3rem;
+  }
+
+  .ext-children-row {
+    gap: 0.5rem;
+  }
+}
