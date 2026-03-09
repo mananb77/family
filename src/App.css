@@ -66,7 +66,7 @@
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .memorial-card {
@@ -90,7 +90,7 @@
 .card-photo-container {
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 75%;
   overflow: hidden;
 }
 
@@ -108,11 +108,21 @@
   transform: scale(1.05);
 }
 
+/* Nana — shift up to focus on face */
+.memorial-card:nth-child(1) .card-photo {
+  object-position: center 15%;
+}
+
+/* Nani — shift down */
+.memorial-card:nth-child(2) .card-photo {
+  object-position: center 35%;
+}
+
 /* Zoom into Dadi's face — full-body photo needs cropping */
 .memorial-card:nth-child(4) .card-photo {
-  object-position: center 10%;
+  object-position: center 15%;
   transform: scale(1.8);
-  transform-origin: center 18%;
+  transform-origin: center 22%;
 }
 
 .memorial-card:nth-child(4):hover .card-photo {
@@ -130,7 +140,7 @@
 }
 
 .card-content {
-  padding: 1.5rem;
+  padding: 1rem 1.2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -558,12 +568,8 @@
   }
 
   .cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-
-  .card-photo-container {
-    padding-top: 75%;
   }
 
   .tree-row {
@@ -648,6 +654,10 @@
 }
 
 @media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
