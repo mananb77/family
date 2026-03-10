@@ -174,10 +174,10 @@ export default function App() {
           <p className="hero-subtitle">In Loving Memory</p>
           <p className="hero-subtitle-hindi hindi">श्रद्धांजलि</p>
           <p className="hero-message">
-            Four lives that shaped ours. Four stories worth remembering.
+            Four extraordinary lives that built everything we are. Four stories we will carry forever.
           </p>
           <p className="hero-message hindi">
-            चार जीवन जिन्होंने हमें गढ़ा। चार कहानियाँ जो याद रखने योग्य हैं।
+            चार असाधारण जीवन जिन्होंने हमारा सब कुछ गढ़ा। चार कहानियाँ जो हम सदा संजोएँगे।
           </p>
         </div>
       </section>

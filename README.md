@@ -23,7 +23,7 @@ This site serves as a central hub connecting the individual memorial pages for o
 - React 19 + Vite
 - Deployed via GitHub Actions to GitHub Pages
 
-## Related Memorial Sites
+## The Grand Parents
 
 - [Nana — Shri Umakant Bhargava](https://mananb77.github.io/nana)
 - [Nani — Smt. Krishna Bhargava](https://mananb77.github.io/nani)
